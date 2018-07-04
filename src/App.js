@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
-import { FormattedMessage, FormattedHTMLMessage } from 'react-intl';
-import logo from './logo.svg';
+import { 
+  FormattedMessage,
+  FormattedHTMLMessage,
+  FormattedDate,
+  FormattedTime,
+} from 'react-intl';
 
 class App extends Component {
   render() {
@@ -15,7 +19,27 @@ class App extends Component {
         <p><FormattedMessage id="detail.averageRating" values={{ avg: '10' }}/></p>
         <p><FormattedMessage id="detail.purchase"/></p>
         <br />
+        <br />
         <FormattedHTMLMessage id="detail.window" values={{ numMerchands: 10 }} />
+        <br />
+        <br />
+        <br />
+        <FormattedDate 
+          value={new Date(1459913574887)}
+          year='numeric'
+          month='long'
+          day='numeric'
+          weekday='long'
+        />
+        <br />
+        <br />
+        <FormattedTime
+          value={new Date(1459913574887)}
+          year='2-digit'
+          month='2-digit'
+          day='2-digit'
+        />
+        <br />
         <br />
         <button>
           <FormattedMessage id="detail.toggle"/>
