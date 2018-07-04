@@ -4,6 +4,7 @@ import { 
   FormattedHTMLMessage,
   FormattedDate,
   FormattedTime,
+  FormattedRelative,
 } from 'react-intl';
 
 class App extends Component {
@@ -39,6 +40,13 @@ class App extends Component {
           month='2-digit'
           day='2-digit'
         />
+        <br />
+        <FormattedRelative 
+          value={new Date(1459913574887)}
+          // updateInterval={1000}
+          style="numeric"
+        />
+        <br />
         <br />
         <br />
         <button>
