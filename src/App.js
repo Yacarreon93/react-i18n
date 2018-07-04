@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, FormattedHTMLMessage } from 'react-intl';
 import logo from './logo.svg';
 
 class App extends Component {
@@ -14,6 +14,9 @@ class App extends Component {
         <p><FormattedMessage id="detail.author" values={{ author: <b>Yasser</b> }}/></p>
         <p><FormattedMessage id="detail.averageRating" values={{ avg: '10' }}/></p>
         <p><FormattedMessage id="detail.purchase"/></p>
+        <br />
+        <FormattedHTMLMessage id="detail.window" values={{ numMerchands: 10 }} />
+        <br />
         <button>
           <FormattedMessage id="detail.toggle"/>
         </button>
