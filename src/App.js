@@ -9,6 +9,7 @@ import { 
 } from 'react-intl';
 
 import messages from './messages';
+import data from './data';
 
 let locale = 
     (navigator.languages && navigator.languages[0])
@@ -28,7 +29,7 @@ class App extends Component {
           </h1>
         </header>
         <p><FormattedMessage id="detail.author" values={{ author: <b>Yasser</b> }}/></p>
-        <p><FormattedMessage id="detail.averageRating" values={{ avg: '10' }}/></p>
+        <p><FormattedMessage id="detail.averageRating" values={{ avg: '10', count: data[0].reviews }}/></p>
         <p><FormattedMessage id="detail.purchase"/></p>
         <br />
         <br />
@@ -60,7 +61,7 @@ class App extends Component {
         <br />
         <br />
         <FormattedNumber  
-          value={messages[locale].detail.price[locale]}
+          value={data[0].price[locale]}
           style="currency"
           currencyDisplay="symbol"
           currency={locale === 'en-US' ? 'USD' : 'EUR'}
@@ -68,7 +69,7 @@ class App extends Component {
         <br />
         <br />
         <button>
-          <FormattedMessage id="detail.toggle"/>
+          <FormattedMessage id="detail.toggle" />
         </button>
       </div>
     );
