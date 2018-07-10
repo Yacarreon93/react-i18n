@@ -5,7 +5,18 @@ import { 
   FormattedDate,
   FormattedTime,
   FormattedRelative,
+  FormattedNumber,
 } from 'react-intl';
+
+import messages from './messages';
+
+let locale = 
+    (navigator.languages && navigator.languages[0])
+    || navigator.language
+    || navigator.userLanguage
+    || 'en-US';
+
+if (!messages[locale]) locale = 'en-US';
 
 class App extends Component {
   render() {
@@ -47,6 +58,13 @@ class App extends Component {
           style="numeric"
         />
         <br />
+        <br />
+        <FormattedNumber  
+          value={messages[locale].detail.price[locale]}
+          style="currency"
+          currencyDisplay="symbol"
+          currency={locale === 'en-US' ? 'USD' : 'EUR'}
+        />
         <br />
         <br />
         <button>

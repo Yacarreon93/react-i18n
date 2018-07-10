@@ -7,6 +7,11 @@ export default {
       reviewsHeading: 'Reviews',
       averageRating: 'Average Rating: {avg}',
       window: '<small><em>All {numMerchands} links open in a new window.</em></small>',
+      price: {
+        'en-US': '14.95',
+        'es-MX': '13.94',
+        'fr-FR': '13.94',        
+      }
     }
   },
   'es-MX': {
@@ -17,6 +22,11 @@ export default {
       reviewsHeading: 'Comentarios',
       averageRating: 'Puntuación Media: {avg}',
       window: '<small><em>Los {numMerchands} enlaces se abren en una nueva ventana.</em></small>',
+      price: {
+        'en-US': '14.95',
+        'es-MX': '13.94',
+        'fr-FR': '13.94',        
+      }
     }
   },
   'fr-FR': {
@@ -27,6 +37,11 @@ export default {
       reviewsHeading: 'Avis',
       averageRating: 'Note moyenne: {avg}',
       window: '<small><em>Les {numMerchands} lies s\'ouvrent dans une nouvelle fenêtre.</em></small>',
+      price: {
+        'en-US': '14.95',
+        'es-MX': '13.94',
+        'fr-FR': '13.94',        
+      }
     }
   },
 };
