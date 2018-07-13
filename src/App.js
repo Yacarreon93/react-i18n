@@ -6,21 +6,16 @@ import { 
   FormattedTime,
   FormattedRelative,
   FormattedNumber,
+  injectIntl,
 } from 'react-intl';
 
 import messages from './messages';
 import data from './data';
 
-let locale = 
-    (navigator.languages && navigator.languages[0])
-    || navigator.language
-    || navigator.userLanguage
-    || 'en-US';
-
-if (!messages[locale]) locale = 'en-US';
-
 class App extends Component {
   render() {
+    console.log(this.props);
+    const { intl } = this.props;
     return (
       <div>
         <header>
@@ -61,19 +56,23 @@ class App extends Component {
         <br />
         <br />
         <FormattedNumber  
-          value={data[0].price[locale]}
+          value={data[0].price[intl.locale]}
           style="currency"
           currencyDisplay="symbol"
-          currency={locale === 'en-US' ? 'USD' : 'EUR'}
+          currency={intl.locale === 'en-US' ? 'USD' : 'EUR'}
         />
         <br />
         <br />
         <button>
           <FormattedMessage id="detail.toggle" />
         </button>
+        <br />
+        <br />
+        <textarea placeholder={intl.formatMessage({ id: 'detail.placeholder' })}>
+        </textarea>
       </div>
     );
   }
 }
 
-export default App;
+export default injectIntl(App);
