@@ -9,7 +9,6 @@ import { 
   injectIntl,
 } from 'react-intl';
 
-import messages from './messages';
 import data from './data';
 
 class App extends Component {
