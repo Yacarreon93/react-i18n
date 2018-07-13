@@ -14,7 +14,7 @@ import data from './data';
 
 class App extends Component {
   render() {
-    console.log(this.props);
+    // console.log(this.props);
     const { intl } = this.props;
     return (
       <div>
@@ -28,7 +28,7 @@ class App extends Component {
         <p><FormattedMessage id="detail.purchase"/></p>
         <br />
         <br />
-        <FormattedHTMLMessage id="detail.window" values={{ numMerchands: 10 }} />
+        <FormattedHTMLMessage id="detail.window" values={{ numMerchants: 10 }} />
         <br />
         <br />
         <br />

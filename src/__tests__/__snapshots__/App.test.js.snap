@@ -1,0 +1,218 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`app Render expected markup 1`] = `
+<InjectIntl(App)
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en-US",
+      "messages": Object {
+        "detail.author": "by {author}",
+        "detail.averageRating": "Average Rating: {avg} ({count, plural, =0 {No Reviews Yet!} one {# Review} other {# Reviews}})",
+        "detail.placeholder": "What did you think?",
+        "detail.purchase": "Purchase this book from:",
+        "detail.reviewsHeading": "Reviews",
+        "detail.toggle": "Toggle",
+        "detail.window": "<small><em>All {numMerchants} links open in a new window.</em></small>",
+      },
+      "now": [Function],
+      "textComponent": "span",
+    }
+  }
+>
+  <App
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en-US",
+        "messages": Object {
+          "detail.author": "by {author}",
+          "detail.averageRating": "Average Rating: {avg} ({count, plural, =0 {No Reviews Yet!} one {# Review} other {# Reviews}})",
+          "detail.placeholder": "What did you think?",
+          "detail.purchase": "Purchase this book from:",
+          "detail.reviewsHeading": "Reviews",
+          "detail.toggle": "Toggle",
+          "detail.window": "<small><em>All {numMerchants} links open in a new window.</em></small>",
+        },
+        "now": [Function],
+        "textComponent": "span",
+      }
+    }
+  >
+    <div>
+      <header>
+        <h1>
+           
+          <FormattedMessage
+            id="detail.reviewsHeading"
+            values={Object {}}
+          >
+            <span>
+              Reviews
+            </span>
+          </FormattedMessage>
+        </h1>
+      </header>
+      <p>
+        <FormattedMessage
+          id="detail.author"
+          values={
+            Object {
+              "author": <b>
+                Yasser
+            </b>,
+            }
+          }
+        >
+          <span>
+            by 
+            <b>
+              Yasser
+            </b>
+          </span>
+        </FormattedMessage>
+      </p>
+      <p>
+        <FormattedMessage
+          id="detail.averageRating"
+          values={
+            Object {
+              "avg": "10",
+              "count": 1,
+            }
+          }
+        >
+          <span>
+            Average Rating: 10 (1 Review)
+          </span>
+        </FormattedMessage>
+      </p>
+      <p>
+        <FormattedMessage
+          id="detail.purchase"
+          values={Object {}}
+        >
+          <span>
+            Purchase this book from:
+          </span>
+        </FormattedMessage>
+      </p>
+      <br />
+      <br />
+      <FormattedHTMLMessage
+        id="detail.window"
+        values={
+          Object {
+            "numMerchants": 10,
+          }
+        }
+      >
+        <span
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<small><em>All 10 links open in a new window.</em></small>",
+            }
+          }
+        />
+      </FormattedHTMLMessage>
+      <br />
+      <br />
+      <br />
+      <FormattedDate
+        day="numeric"
+        month="long"
+        value={2016-04-06T03:32:54.887Z}
+        weekday="long"
+        year="numeric"
+      >
+        <span>
+          Tuesday, April 5, 2016
+        </span>
+      </FormattedDate>
+      <br />
+      <br />
+      <FormattedTime
+        day="2-digit"
+        month="2-digit"
+        value={2016-04-06T03:32:54.887Z}
+        year="2-digit"
+      >
+        <span>
+          04/05/16, 10:32 PM
+        </span>
+      </FormattedTime>
+      <br />
+      <FormattedRelative
+        style="numeric"
+        updateInterval={10000}
+        value={2016-04-06T03:32:54.887Z}
+      >
+        <span>
+          2 years ago
+        </span>
+      </FormattedRelative>
+      <br />
+      <br />
+      <FormattedNumber
+        currency="USD"
+        currencyDisplay="symbol"
+        style="currency"
+        value="14.95"
+      >
+        <span>
+          $14.95
+        </span>
+      </FormattedNumber>
+      <br />
+      <br />
+      <button>
+        <FormattedMessage
+          id="detail.toggle"
+          values={Object {}}
+        >
+          <span>
+            Toggle
+          </span>
+        </FormattedMessage>
+      </button>
+      <br />
+      <br />
+      <textarea
+        placeholder="What did you think?"
+      />
+    </div>
+  </App>
+</InjectIntl(App)>
+`;
